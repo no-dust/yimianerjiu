@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/Addinterview/Addinterview",
-    "pages/personal/personal",
     "pages/index/index",
+    "pages/personal/personal",
+    "pages/Addinterview/Addinterview",
     "pages/logs/logs"
   ],
   "window": {

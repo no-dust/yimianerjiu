@@ -23,3 +23,38 @@ image{
   width: 10rpx;
   height: 10rpx
 }
+.location{
+  position: fixed;
+  bottom: 160rpx;
+  width: 80rpx;
+  height: 80rpx;
+  left: 20rpx;
+}
+.add{
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  bottom: 0;
+  left: 0;
+  font-size: 40rpx;
+}
+.my{
+  position: fixed;
+  display: inline-block;
+  bottom: 150rpx;
+  right: 0;
+  width: 120rpx;
+  height: 100rpx;
+  
+}
+.my  cover-image{
+    width: 80rpx;
+    height: 80rpx;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    background: #000;
+    border-radius: 50%;
+  }

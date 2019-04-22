@@ -1,5 +1,42 @@
 //index.js
 //获取应用实例
+export function getLocation() {
+  return new Promise((resolve, reject) => {
+    wx.getLocation({
+      type: 'gcj02',
+      success(res) {
+        resolve(res);
+      }
+    })
+  })
+}
+export function getAuth(scope, callback) {
+  wx.getSetting({
+    success: res => {
+      // 如果已授权
+      if (res.authSetting[scope]) {
+        callback();
+      } else {
+        wx.authorize({
+          scope,
+          success: callback,
+          fail: () => {
+            wx.showModal({
+              title: '亲爱的用户', //提示的标题,
+              content: '同意我们的授权，让我们为你提供更加优质的服务', //提示的内容,
+              showCancel: false, //是否显示取消按钮,
+              confirmText: '去设置', //确定按钮的文字，默认为取消，最多 4 个字符,
+              confirmColor: '#3CC51F',   //确定按钮的文字颜色
+              success: res => {
+                wx.openSetting()
+              }
+            })
+          }
+        })
+      }
+    }
+  })
+}
 const app = getApp()
 
 Page({
@@ -43,6 +80,22 @@ Page({
     });
   }
 ,
+  // 重新定位
+  goCurrent() {
+    getAuth('scope.userLocation', async () => {
+      let location = await getLocation();
+      wx.setStorageSync('location', location)
+      this.location = location;
+    })
+  },
+  // 去我的页面
+  goMy() {
+    wx.navigateTo({ url: '/pages/personal/personal' });
+  },
+  // 去添加面试页面
+  goAdd() {
+    wx.navigateTo({ url: '/pages/Addinterview/Addinterview' });
+  },
   onReady: function (e) {
     this.mapCtx = wx.createMapContext('myMap')
   },

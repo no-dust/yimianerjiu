@@ -24,7 +24,9 @@
   </picker>
   </view>
   <view class="add_info">
-   <text>面试地址</text>  <input type="text" placeholder='请输入面试地址' />
+   <text>面试地址</text>  <input type="text" placeholder='请输入面试地址' value='{{current.company}}' />
   </view>
   <view class='add_interview'>备注信息</view>
+  <textarea type="text" v-model="current.description" placeholder="备注信息(可选，100个字以内)"/>
+    <button bindtap="btnEnable" form-type="submit">确认</button>
 </view>

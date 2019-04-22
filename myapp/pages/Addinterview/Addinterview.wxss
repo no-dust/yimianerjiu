@@ -1,0 +1,27 @@
+/* pages/Addinterview/Addinterview.wxss */
+.add_interview{ 
+  width: 100%;
+  padding-left: 3%;
+  height: 80rpx;
+  display: flex;
+  background: #F6F6F6;
+  align-items: center;
+  border-bottom: 1px solid #EFEFEF;
+}
+.add_info{
+  width: 97%;
+  margin-left: 3%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EFEFEF;
+  color: #666666;
+  font-size: 14px
+}
+.add_info text{
+  padding-right: 40rpx;
+}
+picker{
+  padding-left: 20rpx;
+  color: #333333;
+}

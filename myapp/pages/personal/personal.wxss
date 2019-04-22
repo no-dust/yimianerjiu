@@ -1,0 +1,51 @@
+/* pages/personal/personal.wxss */
+.my_box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.my_header{
+  background: #F4F6F9;
+  height: 400rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my_header view{
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my_header view image{
+  width: 60%;
+  height: 60%;
+}
+.my_section{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+}
+.my_section view{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.my_section>view{
+  border-bottom: 1px solid #ccc;
+}
+.my_section view icon{
+  padding: 0 30rpx
+}
+.arrow{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 0 20rpx
+}

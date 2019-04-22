@@ -1,0 +1,24 @@
+<!--pages/personal/personal.wxml-->
+<view class='my_box'>
+  <view class='my_header'>
+    <view>
+      <image src='../../image/my.png' />
+    </view>
+  </view>
+  <view class='my_section'>
+    <view class='my_list'>
+      <view> 
+        <icon type='waiting' size='20'/>
+        <text>我的面试</text>
+      </view>
+      <image class='arrow' src='../../image/arrow.svg' />
+    </view>
+    <view class='my_list'>
+      <view>
+        <icon type="info" size="20" />
+        <text>我的面试</text>
+      </view>
+      <image class='arrow' src='../../image/arrow.svg' />
+    </view>
+  </view>
+</view>

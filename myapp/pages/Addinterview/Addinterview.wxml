@@ -1,0 +1,30 @@
+<!--pages/Addinterview/Addinterview.wxml-->
+<view class='add_box'>
+  <view class='add_interview'>面试信息</view>
+  <view class="add_info">
+   <text>公司名称</text>  <input type="text" placeholder='请输入公司名称' />
+  </view>
+  <view class="add_info">
+   <text>公司电话</text>  <input type="text" placeholder='请输入面试联系人电话' />
+  </view>
+  <view class="add_info">
+   <text>面试时间</text>  
+   <picker mode="date" value="{{date}}"
+    start="2018-04-20"
+    end="2020-04-20"
+    bindchange="bindDateChange"
+  ><view class="picker">{{date}} </view>
+  </picker>
+  <picker
+    mode="time" value="{{time}}"
+    start="00:00" end="23:59"
+    bindchange="bindTimeChange"
+  >
+  <view class="picker">{{time}}</view>
+  </picker>
+  </view>
+  <view class="add_info">
+   <text>面试地址</text>  <input type="text" placeholder='请输入面试地址' />
+  </view>
+  <view class='add_interview'>备注信息</view>
+</view>
